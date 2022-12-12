@@ -2,7 +2,7 @@
 This project is a first person '3D' maze game. Similar to Wolfenstein or Doom, minus enemies and weapons, although they may be added later. It was made using SDL2 and C. It runs on Mac OS X and Linux/Ubuntu. The game uses the technique raycasting to create the apparent 3D nature of the maze.
 
 ## Requirements to Play
-- Mac OS X or Linux/Ubuntu or windows
+- Mac OS X or Linux or windows
 - SDL2
 
 If you don't have SDL2 installed download the installation script <a href="https://s3.amazonaws.com/intranet-projects-files/holbertonschool-low_level_programming/graphics_programming/install_SDL2.sh">here</a>. Then find the script and run it in your terminal:
@@ -16,14 +16,15 @@ p1-3:Downloads 67$ sudo ./install_SDL2.sh
 ## Start the Game
 First step is to clone the repo:
 ```
-git clone https://github.com/corbin-coleman/maze.git
+git clone https://github.com/chimebukanian/3d-maze.git
 ```
 
-Compile all .c files in the maze directory:(linux)
+Compile all .c files in the maze directory:(linux/Mac)
 ```
 gcc -Wall -Werror -Wextra -pedantic -I/usr/local/include/SDL2 -L/usr/local/lib -lSDL2 *.c -o maze
 ```
-Alternatively, just use the make command:
+Alternatively using make, just uncomment for Linux/Mac:
+
 ```
 make
 ```
@@ -42,11 +43,10 @@ Or you can run with multiple maps at once:
 
 Some basic maps are provided in this repo in the maps/ directory, but you can make your own maps to play as well.
 
-After running `./maze maps/level_1` you should see a screen like this:
-<img src="imgs/initial_load.png" width=50% height=50% alt="Screenshot of Red Game Screen" align="middle">
+After running `./maze maps/level_1` you should see a black screen
 
-If you're using the provided maps it'll just be a red screen, but that's not all. If you rotate with the arrow keys to the right you'll see the rest of the maze:
 
+If you're using the provided maps it'll just be a black screen, but that's not all. If you rotate with the arrow keys to the right you'll see the rest of the maze:
 <img src="imgs/move_first.png" width=50% height=50% alt="Screenshot of Game Screen w/ Columns"/>
 
 ## Play the Game
@@ -69,7 +69,7 @@ In the image above the player starts 2 spaces in from the top left corner, and t
 
 **Map File Characters' in Game Meanings**
 - **0**: Floor/walkable space
-- **1**: Red Wall
+- **1**: black Wall
 - **2**: Green Wall
 - **3**: Blue Wall
 - **4**: Yellow Wall
@@ -78,6 +78,6 @@ In the image above the player starts 2 spaces in from the top left corner, and t
 - All other characters will be defaulted to white walls
 
 ### Authors
-**Corbin Coleman** \<corbincol@gmail.com> <a href="https://twitter.com/CorbinMColeman">@CorbinMColeman</a>
+**Anyanwu Chimebuka Emmanuel \<chimebukaanyanwu@gmail.com> <a href="https://twitter.com/ebukanian">@ebukanian</a>
 
 ## This project is still a work in progress more detail on the project will be available in the future
